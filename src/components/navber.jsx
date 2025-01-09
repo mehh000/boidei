@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 function Navber() {
@@ -9,10 +11,11 @@ function Navber() {
         {/* Desktop View */}
         <div className="hidden md:flex items-center justify-between py-4">
           {/* Logo */}
-          <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-[#fd7e14]">
-              Booktionary
-            </a>
+          <div className="flex items-center ">
+            <Link href={'/'} className='flex items-center flex-row'>
+            <Image src={'/bookLogo.png'} height={50} width={80} alt='Boidei' />
+            <Image src={'/logo_2nd.png'} height={50} width={80} alt='Boidei' />
+            </Link>
           </div>
 
           {/* Search and Icons */}
@@ -83,7 +86,7 @@ function Navber() {
               </div>
             </div>
           </div>
-          
+
           {/* Search Bar in Mobile */}
           <div className="px-4 pb-4">
             <div className="relative">
